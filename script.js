@@ -15,20 +15,43 @@ function unknown_bing_request() {
     window.location.assign("https://www.bing.com/search?q="+sort(10));
 }
 
-function start() {
-    let j = 0
-    while (j < 3) {
-        setTimeout(() => {
+
+
+function start(config) {
+    if (localStorage.getItem('started') == 'working') {
+        let j = parseInt(localStorage.getItem('j'))
+        if (j < 3) { // +3
+            j += 1
+            localStorage.setItem('j', j.toString());
             unknown_bing_request()
-        }, j*600)
-        alert(j)
-        j += 1
+        } else { // +1
+            localStorage.removeItem('started')
+            localStorage.removeItem('j')
+            unknown_bing_request()
+        }
+    } else {
+        if(config != 'main') {
+            localStorage.setItem('started', 'working');
+            localStorage.setItem('j', '0');
+
+        }
     }
 }
 
-const BingButton = document.createElement('p')
+function test(){
+    alert(localStorage.getItem('test'))
+}
+
+function main() {
+    start('main')
+}
+main()
+
+localStorage.setItem('test', 'working');
+const BingButton = document.createElement('span')
 BingButton.classList.add('BingButton')
-BingButton.innerText = 'AutoEarn'
+BingButton.innerText = 'BS'
+BingButton.onclick = start
 document.getElementById('id_h').classList.add('extended')
 document.getElementById('id_h').appendChild(BingButton);
 

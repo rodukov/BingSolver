@@ -1,5 +1,16 @@
 .BingButton {
-    color: blue;
+    background-color: rgb(255, 255, 255);
+    padding: 15px;
+    border-radius: 5px;
+    color: rgb(94, 94, 94);
+    font-weight: 900;
+    font-size: 19px;
+    transition: .1s;
+    box-shadow: 0px 4px 10px rgb(226, 226, 226);
+}
+.BingButton:hover {
+    cursor: pointer;
+    box-shadow: 0px 8px 10px rgb(226, 226, 226);
 }
 .extended {
     width: 635px;
