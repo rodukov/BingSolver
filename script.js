@@ -20,7 +20,7 @@ function unknown_bing_request() {
 function start(config) {
     if (localStorage.getItem('started') == 'working') {
         let j = parseInt(localStorage.getItem('j'))
-        if (j < 3) { // +3
+        if (j < 10) { // +3
             j += 1
             localStorage.setItem('j', j.toString());
             unknown_bing_request()

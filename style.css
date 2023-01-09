@@ -12,6 +12,11 @@
     cursor: pointer;
     box-shadow: 0px 8px 10px rgb(226, 226, 226);
 }
+.BingButton:active  {
+    color: rgb(0, 94, 255);
+    
+}
+
 .extended {
     width: 635px;
 }
