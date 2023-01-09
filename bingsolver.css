@@ -59,7 +59,6 @@ body {
 .search_bs_item {
     text-align: center;
     font-family: 'alexey';
-    margin-top: -10px;
     cursor: pointer;
 }
 .search_bs_item:hover {
@@ -68,14 +67,15 @@ body {
 }
 .bs_items_results {
     position: absolute;
-
-    border: 1px solid rgb(221, 221, 221);
+    box-shadow: 0 0px 7px rgba(25, 25, 25, 0.123) !important;
+     border: 1px solid rgb(221, 221, 221);
     background-color: rgb(252, 252, 252);
     border-radius: 9px;
     margin-left: 45px; margin-right: 45px;
     width: 81.8%;
     overflow-y: scroll;
-    height: 75px;
+    height: 120px;
+    z-index: 3;
 }
 
 input[type="text"]:focus {
