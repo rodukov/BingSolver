@@ -5,7 +5,7 @@ FILE FOR INJECTION FOR BING.COM
 ======================================================= */
 
 body {
-    width: 600px;
+    width: 500px;
     height: 300px;
     margin: 0; padding: 0;
 }
@@ -56,6 +56,27 @@ body {
     border: 1px solid white;
     box-shadow: 0px 0px 7px rgba(25, 25, 25, 0.123);
 }
+.search_bs_item {
+    text-align: center;
+    font-family: 'alexey';
+    margin-top: -10px;
+    cursor: pointer;
+}
+.search_bs_item:hover {
+    background-color: rgb(247, 247, 247);
+    border-radius: 3px;
+}
+.bs_items_results {
+    position: absolute;
+
+    border: 1px solid rgb(221, 221, 221);
+    background-color: rgb(252, 252, 252);
+    border-radius: 9px;
+    margin-left: 45px; margin-right: 45px;
+    width: 81.8%;
+    overflow-y: scroll;
+    height: 75px;
+}
 
 input[type="text"]:focus {
     animation: ready 0.24s;
@@ -81,18 +102,43 @@ input[type="text"]:focus {
 
 .slogan {
     text-align: center; font-family: 'alexey'; font-size: 12px; color: rgb(104, 104, 104);
-    margin-top: -10px;
     padding: 0; 
 }
 
 .menu {
     background-color: rgb(252, 252, 252);
-    box-shadow: 0px -3px 5px rgba(90, 90, 90, 0.204);
+    box-shadow: 0px -2px 3px rgba(90, 90, 90, 0.204);
     width: 100%;
     height: 55px;
     position: fixed;
     bottom: 0%;
+    border-top: 1px solid rgb(206, 206, 206);
+    border-left: 1px solid rgb(206, 206, 206);
+    border-right: 1px solid rgb(206, 206, 206);
     border-radius: calc(7px * sin(100deg)) calc(7px * sin(100deg)) 0px 0px;
-
-
+    justify-content: center;
+    justify-items: center;
+    display: flex;
+}
+.menu-img {
+    padding-top: 15px;
+    padding-left: 15px; padding-right: 15px;
+    width: 26px;
+    height: 26px;
+    filter: invert(30%);
+    transition: .1s;
+}
+.menu-img:after {
+    content: 'test';
+    width: 100px;
+    height: 30px;
+    background-color: red;
+}
+.menu-img:hover {
+    filter: invert(40%);
+    transform: scale(1.05) translateY(-1px);
+}
+.menu-img-c {
+    margin: 0;
+    margin-top: 5px;
 }

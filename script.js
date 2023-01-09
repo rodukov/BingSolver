@@ -50,6 +50,7 @@ main()
 localStorage.setItem('test', 'working');
 const BingButton = document.createElement('span')
 BingButton.classList.add('BingButton')
+BingButton.classList.add('unselectable')
 BingButton.innerText = 'BS'
 BingButton.onclick = start
 document.getElementById('id_h').classList.add('extended')
